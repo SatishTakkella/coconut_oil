@@ -1,0 +1,502 @@
+/* Wholesale Page Specific Styles */
+
+.page-header {
+    background: linear-gradient(135deg, #2d5016 0%, #4a7c2c 100%);
+    color: white;
+    padding: 80px 0 60px;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    font-size: 1.3rem;
+    opacity: 0.95;
+}
+
+/* Wholesale Intro */
+.wholesale-intro {
+    padding: 80px 0;
+    background: #f9f9f9;
+}
+
+.intro-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.intro-text h2 {
+    font-size: 2.5rem;
+    color: #2d5016;
+    margin-bottom: 1.5rem;
+}
+
+.intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.intro-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.stat-item {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 3rem;
+    color: #2d5016;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Packaging Options */
+.packaging-options {
+    padding: 80px 0;
+}
+
+.packaging-options h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2d5016;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+}
+
+.packaging-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.package-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.package-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.package-card.featured {
+    border: 3px solid #2d5016;
+}
+
+.popular-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ff6b35;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.package-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.package-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.package-card h3 {
+    font-size: 1.5rem;
+    color: #2d5016;
+    margin: 20px 20px 10px;
+}
+
+.package-card>p {
+    color: #666;
+    padding: 0 20px;
+    margin-bottom: 15px;
+}
+
+.package-features {
+    list-style: none;
+    padding: 0 20px;
+    margin: 20px 0;
+}
+
+.package-features li {
+    padding: 8px 0;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.package-card .btn {
+    margin: 20px;
+    width: calc(100% - 40px);
+    text-align: center;
+}
+
+/* B2B Benefits */
+.b2b-benefits {
+    padding: 80px 0;
+    background: #f9f9f9;
+}
+
+.b2b-benefits h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2d5016;
+    margin-bottom: 50px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.benefit-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-icon {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.benefit-card h3 {
+    font-size: 1.4rem;
+    color: #2d5016;
+    margin-bottom: 15px;
+}
+
+.benefit-card p {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Industries Served */
+.industries-served {
+    padding: 80px 0;
+}
+
+.industries-served h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2d5016;
+    margin-bottom: 50px;
+}
+
+.industries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.industry-item {
+    background: linear-gradient(135deg, #2d5016 0%, #4a7c2c 100%);
+    color: white;
+    padding: 35px 25px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.industry-item:hover {
+    transform: scale(1.05);
+}
+
+.industry-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.industry-item p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* Pricing Section */
+.pricing-section {
+    padding: 80px 0;
+    background: #f9f9f9;
+}
+
+.pricing-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2d5016;
+    margin-bottom: 30px;
+}
+
+.pricing-info {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pricing-info>p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.pricing-tiers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.tier {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.tier.featured {
+    background: linear-gradient(135deg, #2d5016 0%, #4a7c2c 100%);
+    color: white;
+    transform: scale(1.05);
+}
+
+.tier h4 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.tier p {
+    font-size: 1.2rem;
+    margin: 15px 0;
+    opacity: 0.9;
+}
+
+.tier span {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.tier:not(.featured) span {
+    background: #f0f0f0;
+    color: #2d5016;
+}
+
+.pricing-note {
+    font-size: 0.9rem;
+    color: #888;
+    font-style: italic;
+    margin-top: 30px;
+}
+
+/* Testimonials B2B */
+.testimonials-b2b {
+    padding: 80px 0;
+}
+
+.testimonials-b2b h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2d5016;
+    margin-bottom: 50px;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    padding: 80px 0;
+    background: #f9f9f9;
+}
+
+.contact-form-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2d5016;
+    margin-bottom: 15px;
+}
+
+.contact-form-section>.container>p {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.wholesale-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2d5016;
+}
+
+.wholesale-form button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 80px 0;
+}
+
+.faq-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2d5016;
+    margin-bottom: 50px;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.faq-item {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 12px;
+    border-left: 4px solid #2d5016;
+}
+
+.faq-item h4 {
+    color: #2d5016;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.faq-item p {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .page-header p {
+        font-size: 1.1rem;
+    }
+
+    .intro-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .pricing-tiers {
+        grid-template-columns: 1fr;
+    }
+
+    .tier.featured {
+        transform: scale(1);
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .wholesale-form {
+        padding: 30px 20px;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-text h2,
+    .packaging-options h2,
+    .b2b-benefits h2,
+    .industries-served h2,
+    .pricing-section h2,
+    .testimonials-b2b h2,
+    .contact-form-section h2,
+    .faq-section h2 {
+        font-size: 2rem;
+    }
+}

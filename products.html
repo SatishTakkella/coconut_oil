@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Browse our range of premium virgin coconut oil products - from 200ml bottles to bulk tanker loads. 100% pure, cold-pressed, organic certified.">
+    <title>Products - Konaseema Organic Coconut Oil</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="products.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <img src="../../../Angular Projects/Konaseema Coconut/coconut-oil-logo.avif"
+                            alt="Konaseema Organic Coconut Oil Logo">
+                        <span>Konaseema Agro Products</span>
+                    </div>
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html" class="active">Products</a></li>
+                        <li><a href="wholesale.html">Wholesale/B2B</a></li>
+                        <li><a href="our-story.html">Our Story</a></li>
+                        <li><a href="sustainability.html">Sustainability</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#" class="cart-icon" aria-label="Shopping cart"><span
+                                    class="cart-count">0</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Premium Products</h1>
+            <p>100% Pure Virgin Coconut Oil - Available in Multiple Sizes</p>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <div class="container">
+            <div class="filters">
+                <div class="filter-group">
+                    <label>Filter by Size:</label>
+                    <select id="size-filter">
+                        <option value="all">All Sizes</option>
+                        <option value="retail">Retail (200ml - 1L)</option>
+                        <option value="bulk">Bulk (10L+)</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Sort by:</label>
+                    <select id="sort-filter">
+                        <option value="default">Default</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card" data-category="retail" data-price="180">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <div class="placeholder-icon">🥥</div>
+                            <div class="placeholder-brand">KONASEEMA</div>
+                            <div class="placeholder-title">Virgin Coconut Oil</div>
+                            <div class="placeholder-size">200ml</div>
+                            <div class="placeholder-tag">100% Pure & Organic</div>
+                        </div>
+                        <span class="product-badge">Bestseller</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Virgin Coconut Oil - 200ml</h3>
+                        <p class="product-description">Perfect for personal use and trial. Ideal for cooking, hair care,
+                            and skin care.</p>
+                        <div class="product-specs">
+                            <span>✓ 100% Pure</span>
+                            <span>✓ Cold-Pressed</span>
+                            <span>✓ FFA: 0.3% max</span>
+                        </div>
+                        <div class="product-price">₹180</div>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="retail" data-price="420">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <div class="placeholder-icon">🥥</div>
+                            <div class="placeholder-brand">KONASEEMA</div>
+                            <div class="placeholder-title">Virgin Coconut Oil</div>
+                            <div class="placeholder-size">500ml</div>
+                            <div class="placeholder-tag">100% Pure & Organic</div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Virgin Coconut Oil - 500ml</h3>
+                        <p class="product-description">Ideal for regular family use. Great value for daily wellness
+                            needs.</p>
+                        <div class="product-specs">
+                            <span>✓ 100% Pure</span>
+                            <span>✓ Cold-Pressed</span>
+                            <span>✓ 2 Year Shelf Life</span>
+                        </div>
+                        <div class="product-price">₹420</div>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="retail" data-price="800">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <div class="placeholder-icon">🥥</div>
+                            <div class="placeholder-brand">KONASEEMA</div>
+                            <div class="placeholder-title">Virgin Coconut Oil</div>
+                            <div class="placeholder-size">1 LITER</div>
+                            <div class="placeholder-tag">100% Pure & Organic</div>
+                        </div>
+                        <span class="product-badge">Value Pack</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Virgin Coconut Oil - 1 Liter</h3>
+                        <p class="product-description">Best value for daily wellness. Perfect for families and regular
+                            users.</p>
+                        <div class="product-specs">
+                            <span>✓ 100% Pure</span>
+                            <span>✓ Food Grade</span>
+                            <span>✓ Leak-Proof Pack</span>
+                        </div>
+                        <div class="product-price">₹800</div>
+                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="bulk" data-price="7500">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <div class="placeholder-icon">🥥</div>
+                            <div class="placeholder-brand">KONASEEMA</div>
+                            <div class="placeholder-title">Bulk Pack</div>
+                            <div class="placeholder-size">10 LITERS</div>
+                            <div class="placeholder-tag">Food Grade</div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Virgin Coconut Oil - 10 Liters</h3>
+                        <p class="product-description">Bulk pack for small businesses, restaurants, and large families.
+                        </p>
+                        <div class="product-specs">
+                            <span>✓ Bulk Pricing</span>
+                            <span>✓ Hi-Tech Packing</span>
+                            <span>✓ B2B Ready</span>
+                        </div>
+                        <div class="product-price">₹7,500</div>
+                        <a href="contact.html" class="btn btn-secondary">Request Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="bulk" data-price="28000">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <div class="placeholder-icon">🥥</div>
+                            <div class="placeholder-brand">KONASEEMA</div>
+                            <div class="placeholder-title">Jerrycan</div>
+                            <div class="placeholder-size">15L / 20L</div>
+                            <div class="placeholder-tag">Industrial Grade</div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Jerrycan - 15L / 20L</h3>
+                        <p class="product-description">Industrial-grade packaging for wholesalers and manufacturers.</p>
+                        <div class="product-specs">
+                            <span>✓ Food Grade</span>
+                            <span>✓ Leak-Proof</span>
+                            <span>✓ Easy Handling</span>
+                        </div>
+                        <div class="product-price">From ₹28,000</div>
+                        <a href="wholesale.html" class="btn btn-secondary">Wholesale Inquiry</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="bulk" data-price="150000">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <div class="placeholder-icon">🥥</div>
+                            <div class="placeholder-brand">KONASEEMA</div>
+                            <div class="placeholder-title">ISO Drum</div>
+                            <div class="placeholder-size">200 LITERS</div>
+                            <div class="placeholder-tag">Export Ready</div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>ISO Drum - 200 Liters</h3>
+                        <p class="product-description">Standard industrial packaging for large-scale operations.</p>
+                        <div class="product-specs">
+                            <span>✓ ISO Standard</span>
+                            <span>✓ Export Ready</span>
+                            <span>✓ Certified</span>
+                        </div>
+                        <div class="product-price">Request Quote</div>
+                        <a href="wholesale.html" class="btn btn-secondary">Wholesale Inquiry</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="bulk" data-price="900000">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <div class="placeholder-icon">🥥</div>
+                            <div class="placeholder-brand">KONASEEMA</div>
+                            <div class="placeholder-title">Tanker Load</div>
+                            <div class="placeholder-size">12MT - 30MT</div>
+                            <div class="placeholder-tag">Best Rates</div>
+                        </div>
+                        <span class="product-badge">Bulk Supply</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Tanker Loads - 12MT to 30MT</h3>
+                        <p class="product-description">Maximum capacity for large manufacturers and exporters.</p>
+                        <div class="product-specs">
+                            <span>✓ 12-30 MT</span>
+                            <span>✓ Direct Supply</span>
+                            <span>✓ Best Rates</span>
+                        </div>
+                        <div class="product-price">Request Quote</div>
+                        <a href="wholesale.html" class="btn btn-secondary">Wholesale Inquiry</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="bulk" data-price="0">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <div class="placeholder-icon">🥥</div>
+                            <div class="placeholder-brand">KONASEEMA</div>
+                            <div class="placeholder-title">Custom Packaging</div>
+                            <div class="placeholder-size">Any Size</div>
+                            <div class="placeholder-tag">Private Label Available</div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Custom Packaging</h3>
+                        <p class="product-description">Consumer pouches and custom sizes available on request.</p>
+                        <div class="product-specs">
+                            <span>✓ Custom Sizes</span>
+                            <span>✓ Private Label</span>
+                            <span>✓ Flexible MOQ</span>
+                        </div>
+                        <div class="product-price">Contact Us</div>
+                        <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-details">
+        <div class="container">
+            <h2>Product Specifications</h2>
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <h4>Ingredients</h4>
+                    <p>100% Pure Virgin Coconut Oil</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Extraction Method</h4>
+                    <p>Cold-Pressed (Heatless Technology)</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Purity</h4>
+                    <p>100% Food-Grade</p>
+                </div>
+                <div class="spec-item">
+                    <h4>FFA Level</h4>
+                    <p>0.3% Maximum</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Shelf Life</h4>
+                    <p>2 Years (Proper Storage)</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Certifications</h4>
+                    <p>Organic Certified, GST Registered</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Konaseema Agro Products</h4>
+                    <p>Premium organic virgin coconut oil from the heart of East Godavari, Andhra Pradesh.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="WhatsApp">💬</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="wholesale.html">Wholesale</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <p>📍 Mummidivaram, East Godavari<br>Andhra Pradesh, India</p>
+                    <p>📞 +91 XXXXX XXXXX</p>
+                    <p>✉️ info@konaseemacoconutoil.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Konaseema Agro Products. All rights reserved. | GST Registered</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="products.js"></script>
+</body>
+
+</html>
