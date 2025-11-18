@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Pure Heritage Coconut Oil</title>
+    <meta name="description" content="Review your Pure Heritage coconut oil order from Konaseema, East Godavari">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <img src="coconut-oil-logo.avif" alt="Pure Heritage Logo">
+                        <span>Pure Heritage</span>
+                    </div>
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="our-story.html">Our Story</a></li>
+                        <li><a href="sustainability.html">Sustainability</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="wholesale.html">Wholesale</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li>
+                            <a href="cart.html" class="cart-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="cart-count">3</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Cart Hero -->
+    <section class="cart-hero">
+        <div class="container">
+            <h1><i class="fas fa-shopping-cart"></i> Your Shopping Cart</h1>
+            <p>Pure Heritage from Konaseema - Quality you can trust</p>
+        </div>
+    </section>
+
+    <!-- Progress Steps -->
+    <section class="progress-section">
+        <div class="container">
+            <div class="progress-steps">
+                <div class="progress-step active">
+                    <div class="step-icon"><i class="fas fa-shopping-cart"></i></div>
+                    <div class="step-label">Shopping Cart</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step">
+                    <div class="step-icon"><i class="fas fa-shipping-fast"></i></div>
+                    <div class="step-label">Shipping Details</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step">
+                    <div class="step-icon"><i class="fas fa-credit-card"></i></div>
+                    <div class="step-label">Payment</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step">
+                    <div class="step-icon"><i class="fas fa-check-circle"></i></div>
+                    <div class="step-label">Confirmation</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Content -->
+    <section class="cart-section">
+        <div class="container">
+            <div class="cart-layout">
+                <!-- Cart Items -->
+                <div class="cart-items">
+                    <div class="cart-header">
+                        <h2>Cart Items (<span id="total-items">3</span>)</h2>
+                        <button class="clear-cart-btn" onclick="clearCart()">
+                            <i class="fas fa-trash"></i> Clear Cart
+                        </button>
+                    </div>
+
+                    <!-- Empty Cart Message (Hidden by default) -->
+                    <div class="empty-cart" style="display: none;">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h3>Your cart is empty</h3>
+                        <p>Discover our premium cold-pressed coconut oil from Konaseema</p>
+                        <a href="products.html" class="btn btn-primary">Shop Now</a>
+                    </div>
+
+                    <!-- Cart Items List -->
+                    <div class="cart-items-list">
+                        <!-- Cart Item 1 -->
+                        <div class="cart-item" data-product-id="1">
+                            <div class="item-image">
+                                <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=150"
+                                    alt="Virgin Coconut Oil 500ml">
+                            </div>
+                            <div class="item-details">
+                                <h3>Virgin Coconut Oil - 500ml</h3>
+                                <p class="item-origin"><i class="fas fa-map-marker-alt"></i> Konaseema, East Godavari
+                                </p>
+                                <div class="item-badges">
+                                    <span class="badge">100% Natural</span>
+                                    <span class="badge">Cold-Pressed</span>
+                                </div>
+                                <button class="remove-item" onclick="removeItem(1)">
+                                    <i class="fas fa-trash"></i> Remove
+                                </button>
+                            </div>
+                            <div class="item-quantity">
+                                <label>Quantity:</label>
+                                <div class="quantity-controls">
+                                    <button onclick="decreaseQuantity(1)"><i class="fas fa-minus"></i></button>
+                                    <input type="number" value="2" min="1" max="10" id="qty-1"
+                                        onchange="updateQuantity(1)">
+                                    <button onclick="increaseQuantity(1)"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="item-price">
+                                <div class="unit-price">₹480 each</div>
+                                <div class="total-price" id="price-1">₹960</div>
+                            </div>
+                        </div>
+
+                        <!-- Cart Item 2 -->
+                        <div class="cart-item" data-product-id="2">
+                            <div class="item-image">
+                                <img src="https://images.unsplash.com/photo-1593818605045-5e0c8f2c6d5e?w=150"
+                                    alt="Virgin Coconut Oil 1L">
+                            </div>
+                            <div class="item-details">
+                                <h3>Virgin Coconut Oil - 1 Liter</h3>
+                                <p class="item-origin"><i class="fas fa-map-marker-alt"></i> Konaseema, East Godavari
+                                </p>
+                                <div class="item-badges">
+                                    <span class="badge">100% Natural</span>
+                                    <span class="badge">Premium Quality</span>
+                                </div>
+                                <button class="remove-item" onclick="removeItem(2)">
+                                    <i class="fas fa-trash"></i> Remove
+                                </button>
+                            </div>
+                            <div class="item-quantity">
+                                <label>Quantity:</label>
+                                <div class="quantity-controls">
+                                    <button onclick="decreaseQuantity(2)"><i class="fas fa-minus"></i></button>
+                                    <input type="number" value="1" min="1" max="10" id="qty-2"
+                                        onchange="updateQuantity(2)">
+                                    <button onclick="increaseQuantity(2)"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="item-price">
+                                <div class="unit-price">₹920 each</div>
+                                <div class="total-price" id="price-2">₹920</div>
+                            </div>
+                        </div>
+
+                        <!-- Cart Item 3 -->
+                        <div class="cart-item" data-product-id="3">
+                            <div class="item-image">
+                                <img src="https://images.unsplash.com/photo-1615485500834-bc10199bc727?w=150"
+                                    alt="Virgin Coconut Oil 250ml">
+                            </div>
+                            <div class="item-details">
+                                <h3>Virgin Coconut Oil - 250ml</h3>
+                                <p class="item-origin"><i class="fas fa-map-marker-alt"></i> Konaseema, East Godavari
+                                </p>
+                                <div class="item-badges">
+                                    <span class="badge">Best Seller</span>
+                                    <span class="badge">Cold-Pressed</span>
+                                </div>
+                                <button class="remove-item" onclick="removeItem(3)">
+                                    <i class="fas fa-trash"></i> Remove
+                                </button>
+                            </div>
+                            <div class="item-quantity">
+                                <label>Quantity:</label>
+                                <div class="quantity-controls">
+                                    <button onclick="decreaseQuantity(3)"><i class="fas fa-minus"></i></button>
+                                    <input type="number" value="1" min="1" max="10" id="qty-3"
+                                        onchange="updateQuantity(3)">
+                                    <button onclick="increaseQuantity(3)"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="item-price">
+                                <div class="unit-price">₹250 each</div>
+                                <div class="total-price" id="price-3">₹250</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Continue Shopping -->
+                    <div class="continue-shopping">
+                        <a href="products.html" class="btn btn-outline">
+                            <i class="fas fa-arrow-left"></i> Continue Shopping
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <div class="summary-card">
+                        <h3>Order Summary</h3>
+
+                        <div class="summary-row">
+                            <span>Subtotal (<span id="summary-items">3</span> items)</span>
+                            <span id="subtotal">₹2,130</span>
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Shipping</span>
+                            <span id="shipping-cost">₹100</span>
+                        </div>
+
+                        <div class="summary-row discount-row">
+                            <span><i class="fas fa-tag"></i> Discount</span>
+                            <span class="discount-amount" id="discount">-₹0</span>
+                        </div>
+
+                        <div class="summary-divider"></div>
+
+                        <div class="summary-row total-row">
+                            <span>Total Amount</span>
+                            <span id="total-amount">₹2,230</span>
+                        </div>
+
+                        <div class="free-shipping-banner">
+                            <i class="fas fa-truck"></i>
+                            <p>Add <strong id="free-shipping-remaining">₹770</strong> more for FREE shipping!</p>
+                            <div class="shipping-progress">
+                                <div class="shipping-progress-bar" id="shipping-progress"></div>
+                            </div>
+                        </div>
+
+                        <!-- Promo Code -->
+                        <div class="promo-code-section">
+                            <h4>Have a promo code?</h4>
+                            <div class="promo-input-group">
+                                <input type="text" id="promo-code" placeholder="Enter code">
+                                <button onclick="applyPromoCode()" class="btn-apply">Apply</button>
+                            </div>
+                            <div class="promo-message" id="promo-message"></div>
+                        </div>
+
+                        <!-- Checkout Button -->
+                        <button class="btn btn-primary checkout-btn" onclick="proceedToCheckout()">
+                            <i class="fas fa-lock"></i> Proceed to Checkout
+                        </button>
+
+                        <!-- Trust Badges -->
+                        <div class="trust-badges">
+                            <div class="trust-badge">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Secure Payment</span>
+                            </div>
+                            <div class="trust-badge">
+                                <i class="fas fa-undo"></i>
+                                <span>Easy Returns</span>
+                            </div>
+                            <div class="trust-badge">
+                                <i class="fas fa-leaf"></i>
+                                <span>100% Natural</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Delivery Info -->
+                    <div class="delivery-info-card">
+                        <h4><i class="fas fa-shipping-fast"></i> Delivery Information</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Free shipping on orders above ₹3,000</li>
+                            <li><i class="fas fa-check"></i> Delivery in 3-5 business days</li>
+                            <li><i class="fas fa-check"></i> Cash on Delivery available</li>
+                            <li><i class="fas fa-check"></i> Fresh from Konaseema farms</li>
+                        </ul>
+                    </div>
+
+                    <!-- Payment Methods -->
+                    <div class="payment-methods-card">
+                        <h4>We Accept</h4>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fas fa-university"></i>
+                            <i class="fas fa-mobile-alt"></i>
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- You May Also Like -->
+    <section class="recommendations-section">
+        <div class="container">
+            <h2>You May Also Like</h2>
+            <div class="recommendations-grid">
+                <!-- Recommendation 1 -->
+                <div class="recommendation-card">
+                    <div class="rec-image">
+                        <img src="https://images.unsplash.com/photo-1587486937736-e7c1b5e4b3f7?w=300"
+                            alt="Virgin Coconut Oil 2L">
+                        <span class="rec-badge">Family Size</span>
+                    </div>
+                    <h4>Virgin Coconut Oil - 2L</h4>
+                    <p class="rec-origin"><i class="fas fa-map-marker-alt"></i> Konaseema</p>
+                    <div class="rec-price">₹1,800</div>
+                    <button class="btn btn-secondary btn-small"
+                        onclick="addToCartQuick(4, 'Virgin Coconut Oil - 2L', 1800)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- Recommendation 2 -->
+                <div class="recommendation-card">
+                    <div class="rec-image">
+                        <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=300"
+                            alt="Heritage Gift Set">
+                        <span class="rec-badge">Premium Gift</span>
+                    </div>
+                    <h4>Heritage Gift Set</h4>
+                    <p class="rec-origin"><i class="fas fa-map-marker-alt"></i> Konaseema</p>
+                    <div class="rec-price">₹1,500</div>
+                    <button class="btn btn-secondary btn-small" onclick="addToCartQuick(5, 'Heritage Gift Set', 1500)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- Recommendation 3 -->
+                <div class="recommendation-card">
+                    <div class="rec-image">
+                        <img src="https://images.unsplash.com/photo-1608181831042-c5b3e5d61e0a?w=300"
+                            alt="Virgin Coconut Oil 5L">
+                        <span class="rec-badge">Best Value</span>
+                    </div>
+                    <h4>Virgin Coconut Oil - 5L</h4>
+                    <p class="rec-origin"><i class="fas fa-map-marker-alt"></i> Konaseema</p>
+                    <div class="rec-price">₹4,200</div>
+                    <button class="btn btn-secondary btn-small"
+                        onclick="addToCartQuick(6, 'Virgin Coconut Oil - 5L', 4200)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-section">
+        <div class="container">
+            <h2>Why Choose Pure Heritage?</h2>
+            <div class="why-choose-grid">
+                <div class="why-choose-item">
+                    <i class="fas fa-leaf"></i>
+                    <h4>100% Natural</h4>
+                    <p>No chemicals, no additives, pure coconut oil from Konaseema</p>
+                </div>
+                <div class="why-choose-item">
+                    <i class="fas fa-temperature-low"></i>
+                    <h4>Cold-Pressed</h4>
+                    <p>Traditional methods preserve all natural nutrients</p>
+                </div>
+                <div class="why-choose-item">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h4>Konaseema Origin</h4>
+                    <p>From the finest coconut groves of East Godavari</p>
+                </div>
+                <div class="why-choose-item">
+                    <i class="fas fa-certificate"></i>
+                    <h4>Quality Assured</h4>
+                    <p>Every batch tested for purity and authenticity</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Pure Heritage</h4>
+                    <p>Authentic cold-pressed virgin coconut oil from the heart of Konaseema, East Godavari. Preserving
+                        tradition, delivering purity.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="our-story.html">Our Story</a></li>
+                        <li><a href="sustainability.html">Sustainability</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="wholesale.html">Wholesale Inquiry</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns Policy</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Konaseema, East Godavari<br>Andhra Pradesh, India</p>
+                    <p><i class="fas fa-phone"></i> +91 [phone_number]</p>
+                    <p><i class="fas fa-envelope"></i> [email]</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pure Heritage. All rights reserved. | Crafted with tradition from Konaseema</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+</body>
+
+</html>

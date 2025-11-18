@@ -4,22 +4,310 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Pure Heritage Coconut Oil | Cold-Pressed Excellence from Konaseema</title>
     <meta name="description"
-        content="Browse our range of premium virgin coconut oil products - from 200ml bottles to bulk tanker loads. 100% pure, cold-pressed, organic certified.">
-    <title>Products - Konaseema Organic Coconut Oil</title>
+        content="100% Natural, Chemical-Free Virgin Coconut Oil from the Heart of East Godavari. Experience the pure heritage of Konaseema's finest cold-pressed coconut oil.">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Products Page Specific Styles */
+        .products-hero {
+            background: linear-gradient(rgba(45, 80, 22, 0.85), rgba(45, 80, 22, 0.85)),
+                url('https://images.unsplash.com/photo-1598511726623-d2e9996892f0?w=1600') center/cover;
+            padding: 6rem 0 4rem;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .products-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .products-hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent-color);
+        }
+
+        .products-hero p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        /* Heritage Banner */
+        .heritage-banner {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+            border-radius: 10px;
+        }
+
+        .heritage-banner h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .heritage-banner p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        /* Filter Section */
+        .filter-section {
+            background: var(--bg-light);
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .filter-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .filter-group label {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .filter-group select {
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--primary-color);
+            border-radius: 5px;
+            background: var(--white);
+            color: var(--text-dark);
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .product-count-display {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        .product-count-display strong {
+            color: var(--primary-color);
+        }
+
+        /* Enhanced Product Cards */
+        .product-card {
+            position: relative;
+        }
+
+        .product-title {
+            font-size: 1.3rem;
+        }
+
+        .product-origin {
+            padding: 0 1.5rem;
+            color: var(--secondary-color);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-features {
+            padding: 0 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .product-features ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .product-features li {
+            padding: 0.3rem 0;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .product-features li:before {
+            content: "✓ ";
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        /* Quality Badges */
+        .quality-badges {
+            display: flex;
+            gap: 0.5rem;
+            padding: 0 1.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .quality-badge {
+            background: var(--bg-light);
+            color: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border: 1px solid var(--primary-color);
+        }
+
+        /* No Products Message */
+        .no-products {
+            display: none;
+            text-align: center;
+            padding: 3rem;
+            background: var(--bg-light);
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .no-products i {
+            font-size: 3rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        /* Konaseema Story Section */
+        .konaseema-story {
+            padding: 4rem 0;
+            background: var(--white);
+        }
+
+        .story-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .story-text h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .story-text p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .story-image {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .story-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        /* Process Section */
+        .process-section {
+            padding: 4rem 0;
+            background: var(--bg-light);
+        }
+
+        .process-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .process-step {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .step-number {
+            background: var(--primary-color);
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        .process-step h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .process-step p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .products-hero h1 {
+                font-size: 2rem;
+            }
+
+            .products-hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .filter-controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .filter-group {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .story-content {
+                grid-template-columns: 1fr;
+            }
+
+            .story-image img {
+                height: 300px;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Header -->
     <header class="header">
         <nav class="navbar">
             <div class="container">
                 <div class="nav-wrapper">
                     <div class="logo">
-                        <img src="../../../Angular Projects/Konaseema Coconut/coconut-oil-logo.avif"
-                            alt="Konaseema Organic Coconut Oil Logo">
-                        <span>Konaseema Agro Products</span>
+                        <img src="coconut-oil-logo.avif" alt="Pure Heritage Logo">
+                        <span>Pure Heritage</span>
                     </div>
                     <button class="mobile-menu-toggle" aria-label="Toggle menu">
                         <span></span>
@@ -28,286 +316,334 @@
                     </button>
                     <ul class="nav-menu">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="products.html" class="active">Products</a></li>
-                        <li><a href="wholesale.html">Wholesale/B2B</a></li>
                         <li><a href="our-story.html">Our Story</a></li>
                         <li><a href="sustainability.html">Sustainability</a></li>
                         <li><a href="blog.html">Blog</a></li>
+                        <li><a href="wholesale.html">Wholesale</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="#" class="cart-icon" aria-label="Shopping cart"><span
-                                    class="cart-count">0</span></a></li>
+                        <li>
+                            <a href="cart.html" class="cart-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="cart-count">0</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <section class="page-header">
+    <!-- Products Hero -->
+    <section class="products-hero">
         <div class="container">
-            <h1>Our Premium Products</h1>
-            <p>100% Pure Virgin Coconut Oil - Available in Multiple Sizes</p>
+            <p class="subtitle">Pure Heritage</p>
+            <h1>Cold-Pressed Excellence from Konaseema</h1>
+            <p>100% Natural, Chemical-Free Virgin Coconut Oil from the Heart of East Godavari</p>
         </div>
     </section>
 
-    <section class="products-section">
+    <!-- Heritage Banner -->
+    <section class="container">
+        <div class="heritage-banner">
+            <h2><i class="fas fa-leaf"></i> Authentic Konaseema Heritage</h2>
+            <p>Every bottle carries the legacy of traditional cold-pressing methods passed down through generations in
+                East Godavari's coconut paradise</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
         <div class="container">
-            <div class="filters">
+            <div class="filter-controls">
                 <div class="filter-group">
-                    <label>Filter by Size:</label>
+                    <label for="size-filter"><i class="fas fa-filter"></i> Filter by Size:</label>
                     <select id="size-filter">
                         <option value="all">All Sizes</option>
-                        <option value="retail">Retail (200ml - 1L)</option>
-                        <option value="bulk">Bulk (10L+)</option>
+                        <option value="small">Small (250ml - 500ml)</option>
+                        <option value="medium">Medium (1L)</option>
+                        <option value="large">Large (2L - 5L)</option>
                     </select>
                 </div>
                 <div class="filter-group">
-                    <label>Sort by:</label>
+                    <label for="sort-filter"><i class="fas fa-sort"></i> Sort by:</label>
                     <select id="sort-filter">
-                        <option value="default">Default</option>
+                        <option value="featured">Featured</option>
                         <option value="price-low">Price: Low to High</option>
                         <option value="price-high">Price: High to Low</option>
                     </select>
                 </div>
-            </div>
-
-            <div class="products-grid">
-                <div class="product-card" data-category="retail" data-price="180">
-                    <div class="product-image">
-                        <div class="product-placeholder">
-                            <div class="placeholder-icon">🥥</div>
-                            <div class="placeholder-brand">KONASEEMA</div>
-                            <div class="placeholder-title">Virgin Coconut Oil</div>
-                            <div class="placeholder-size">200ml</div>
-                            <div class="placeholder-tag">100% Pure & Organic</div>
-                        </div>
-                        <span class="product-badge">Bestseller</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Virgin Coconut Oil - 200ml</h3>
-                        <p class="product-description">Perfect for personal use and trial. Ideal for cooking, hair care,
-                            and skin care.</p>
-                        <div class="product-specs">
-                            <span>✓ 100% Pure</span>
-                            <span>✓ Cold-Pressed</span>
-                            <span>✓ FFA: 0.3% max</span>
-                        </div>
-                        <div class="product-price">₹180</div>
-                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
-                    </div>
-                </div>
-
-                <div class="product-card" data-category="retail" data-price="420">
-                    <div class="product-image">
-                        <div class="product-placeholder">
-                            <div class="placeholder-icon">🥥</div>
-                            <div class="placeholder-brand">KONASEEMA</div>
-                            <div class="placeholder-title">Virgin Coconut Oil</div>
-                            <div class="placeholder-size">500ml</div>
-                            <div class="placeholder-tag">100% Pure & Organic</div>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3>Virgin Coconut Oil - 500ml</h3>
-                        <p class="product-description">Ideal for regular family use. Great value for daily wellness
-                            needs.</p>
-                        <div class="product-specs">
-                            <span>✓ 100% Pure</span>
-                            <span>✓ Cold-Pressed</span>
-                            <span>✓ 2 Year Shelf Life</span>
-                        </div>
-                        <div class="product-price">₹420</div>
-                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
-                    </div>
-                </div>
-
-                <div class="product-card" data-category="retail" data-price="800">
-                    <div class="product-image">
-                        <div class="product-placeholder">
-                            <div class="placeholder-icon">🥥</div>
-                            <div class="placeholder-brand">KONASEEMA</div>
-                            <div class="placeholder-title">Virgin Coconut Oil</div>
-                            <div class="placeholder-size">1 LITER</div>
-                            <div class="placeholder-tag">100% Pure & Organic</div>
-                        </div>
-                        <span class="product-badge">Value Pack</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Virgin Coconut Oil - 1 Liter</h3>
-                        <p class="product-description">Best value for daily wellness. Perfect for families and regular
-                            users.</p>
-                        <div class="product-specs">
-                            <span>✓ 100% Pure</span>
-                            <span>✓ Food Grade</span>
-                            <span>✓ Leak-Proof Pack</span>
-                        </div>
-                        <div class="product-price">₹800</div>
-                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
-                    </div>
-                </div>
-
-                <div class="product-card" data-category="bulk" data-price="7500">
-                    <div class="product-image">
-                        <div class="product-placeholder">
-                            <div class="placeholder-icon">🥥</div>
-                            <div class="placeholder-brand">KONASEEMA</div>
-                            <div class="placeholder-title">Bulk Pack</div>
-                            <div class="placeholder-size">10 LITERS</div>
-                            <div class="placeholder-tag">Food Grade</div>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3>Virgin Coconut Oil - 10 Liters</h3>
-                        <p class="product-description">Bulk pack for small businesses, restaurants, and large families.
-                        </p>
-                        <div class="product-specs">
-                            <span>✓ Bulk Pricing</span>
-                            <span>✓ Hi-Tech Packing</span>
-                            <span>✓ B2B Ready</span>
-                        </div>
-                        <div class="product-price">₹7,500</div>
-                        <a href="contact.html" class="btn btn-secondary">Request Quote</a>
-                    </div>
-                </div>
-
-                <div class="product-card" data-category="bulk" data-price="28000">
-                    <div class="product-image">
-                        <div class="product-placeholder">
-                            <div class="placeholder-icon">🥥</div>
-                            <div class="placeholder-brand">KONASEEMA</div>
-                            <div class="placeholder-title">Jerrycan</div>
-                            <div class="placeholder-size">15L / 20L</div>
-                            <div class="placeholder-tag">Industrial Grade</div>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3>Jerrycan - 15L / 20L</h3>
-                        <p class="product-description">Industrial-grade packaging for wholesalers and manufacturers.</p>
-                        <div class="product-specs">
-                            <span>✓ Food Grade</span>
-                            <span>✓ Leak-Proof</span>
-                            <span>✓ Easy Handling</span>
-                        </div>
-                        <div class="product-price">From ₹28,000</div>
-                        <a href="wholesale.html" class="btn btn-secondary">Wholesale Inquiry</a>
-                    </div>
-                </div>
-
-                <div class="product-card" data-category="bulk" data-price="150000">
-                    <div class="product-image">
-                        <div class="product-placeholder">
-                            <div class="placeholder-icon">🥥</div>
-                            <div class="placeholder-brand">KONASEEMA</div>
-                            <div class="placeholder-title">ISO Drum</div>
-                            <div class="placeholder-size">200 LITERS</div>
-                            <div class="placeholder-tag">Export Ready</div>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3>ISO Drum - 200 Liters</h3>
-                        <p class="product-description">Standard industrial packaging for large-scale operations.</p>
-                        <div class="product-specs">
-                            <span>✓ ISO Standard</span>
-                            <span>✓ Export Ready</span>
-                            <span>✓ Certified</span>
-                        </div>
-                        <div class="product-price">Request Quote</div>
-                        <a href="wholesale.html" class="btn btn-secondary">Wholesale Inquiry</a>
-                    </div>
-                </div>
-
-                <div class="product-card" data-category="bulk" data-price="900000">
-                    <div class="product-image">
-                        <div class="product-placeholder">
-                            <div class="placeholder-icon">🥥</div>
-                            <div class="placeholder-brand">KONASEEMA</div>
-                            <div class="placeholder-title">Tanker Load</div>
-                            <div class="placeholder-size">12MT - 30MT</div>
-                            <div class="placeholder-tag">Best Rates</div>
-                        </div>
-                        <span class="product-badge">Bulk Supply</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Tanker Loads - 12MT to 30MT</h3>
-                        <p class="product-description">Maximum capacity for large manufacturers and exporters.</p>
-                        <div class="product-specs">
-                            <span>✓ 12-30 MT</span>
-                            <span>✓ Direct Supply</span>
-                            <span>✓ Best Rates</span>
-                        </div>
-                        <div class="product-price">Request Quote</div>
-                        <a href="wholesale.html" class="btn btn-secondary">Wholesale Inquiry</a>
-                    </div>
-                </div>
-
-                <div class="product-card" data-category="bulk" data-price="0">
-                    <div class="product-image">
-                        <div class="product-placeholder">
-                            <div class="placeholder-icon">🥥</div>
-                            <div class="placeholder-brand">KONASEEMA</div>
-                            <div class="placeholder-title">Custom Packaging</div>
-                            <div class="placeholder-size">Any Size</div>
-                            <div class="placeholder-tag">Private Label Available</div>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3>Custom Packaging</h3>
-                        <p class="product-description">Consumer pouches and custom sizes available on request.</p>
-                        <div class="product-specs">
-                            <span>✓ Custom Sizes</span>
-                            <span>✓ Private Label</span>
-                            <span>✓ Flexible MOQ</span>
-                        </div>
-                        <div class="product-price">Contact Us</div>
-                        <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
-                    </div>
+                <div class="product-count-display">
+                    Showing <strong id="product-count">6</strong> products
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="product-details">
+    <!-- Products Grid -->
+    <section class="container">
+        <div class="no-products">
+            <i class="fas fa-search"></i>
+            <h3>No products found</h3>
+            <p>Try adjusting your filters to see more products</p>
+        </div>
+
+        <div class="products-grid">
+            <!-- Product 1: 250ml -->
+            <div class="product-card" data-category="small" data-price="250">
+                <div class="product-image">
+                    <img src="https://wallpaper.forfun.com/fetch/c9/c9f036c1e535291d15e47148242bbfb0.jpeg"
+                        alt="Pure Heritage Virgin Coconut Oil 250ml">
+                    <span class="product-badge">Best Seller</span>
+                </div>
+                <div class="product-origin"><i class="fas fa-map-marker-alt"></i> Konaseema, East Godavari</div>
+                <h3 class="product-title">Virgin Coconut Oil - 250ml</h3>
+                <p>Perfect for daily cooking and personal care. Cold-pressed from fresh Konaseema coconuts.</p>
+                <div class="quality-badges">
+                    <span class="quality-badge">100% Natural</span>
+                    <span class="quality-badge">Cold-Pressed</span>
+                    <span class="quality-badge">Chemical-Free</span>
+                </div>
+                <div class="product-features">
+                    <ul>
+                        <li>Traditional cold-pressing method</li>
+                        <li>No heat, no chemicals</li>
+                        <li>Rich in MCT & Lauric Acid</li>
+                        <li>Fresh coconut aroma</li>
+                    </ul>
+                </div>
+                <div class="product-price">₹250</div>
+                <button class="btn btn-primary add-to-cart">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+
+            <!-- Product 2: 500ml -->
+            <div class="product-card" data-category="small" data-price="480">
+                <div class="product-image">
+                    <img src="https://wallpaper.forfun.com/fetch/c9/c9f036c1e535291d15e47148242bbfb0.jpeg"
+                        alt="Pure Heritage Virgin Coconut Oil 500ml">
+                    <span class="product-badge">Popular</span>
+                </div>
+                <div class="product-origin"><i class="fas fa-map-marker-alt"></i> Konaseema, East Godavari</div>
+                <h3 class="product-title">Virgin Coconut Oil - 500ml</h3>
+                <p>Ideal family size for cooking, hair care, and skin nourishment. Pure Konaseema quality.</p>
+                <div class="quality-badges">
+                    <span class="quality-badge">100% Natural</span>
+                    <span class="quality-badge">Cold-Pressed</span>
+                    <span class="quality-badge">Organic</span>
+                </div>
+                <div class="product-features">
+                    <ul>
+                        <li>Extracted within 24 hours of harvest</li>
+                        <li>Preserves natural nutrients</li>
+                        <li>Multi-purpose use</li>
+                        <li>Authentic Konaseema taste</li>
+                    </ul>
+                </div>
+                <div class="product-price">₹480</div>
+                <button class="btn btn-primary add-to-cart">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+
+            <!-- Product 3: 1L -->
+            <div class="product-card" data-category="medium" data-price="920">
+                <div class="product-image">
+                    <img src="https://wallpaper.forfun.com/fetch/c9/c9f036c1e535291d15e47148242bbfb0.jpeg"
+                        alt="Pure Heritage Virgin Coconut Oil 1L">
+                    <span class="product-badge">Value Pack</span>
+                </div>
+                <div class="product-origin"><i class="fas fa-map-marker-alt"></i> Konaseema, East Godavari</div>
+                <h3 class="product-title">Virgin Coconut Oil - 1 Liter</h3>
+                <p>Premium quality for health-conscious families. The essence of Konaseema in every drop.</p>
+                <div class="quality-badges">
+                    <span class="quality-badge">100% Natural</span>
+                    <span class="quality-badge">Cold-Pressed</span>
+                    <span class="quality-badge">Premium Quality</span>
+                </div>
+                <div class="product-features">
+                    <ul>
+                        <li>Single-origin Konaseema coconuts</li>
+                        <li>Traditional wooden press method</li>
+                        <li>High smoke point for cooking</li>
+                        <li>Long shelf life</li>
+                    </ul>
+                </div>
+                <div class="product-price">₹920</div>
+                <button class="btn btn-primary add-to-cart">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+
+            <!-- Product 4: 2L -->
+            <div class="product-card" data-category="large" data-price="1800">
+                <div class="product-image">
+                    <img src="https://wallpaper.forfun.com/fetch/c9/c9f036c1e535291d15e47148242bbfb0.jpeg"
+                        alt="Pure Heritage Virgin Coconut Oil 2L">
+                    <span class="product-badge">Family Size</span>
+                </div>
+                <div class="product-origin"><i class="fas fa-map-marker-alt"></i> Konaseema, East Godavari</div>
+                <h3 class="product-title">Virgin Coconut Oil - 2 Liters</h3>
+                <p>Economical family pack. Pure heritage quality from East Godavari's finest coconut groves.</p>
+                <div class="quality-badges">
+                    <span class="quality-badge">100% Natural</span>
+                    <span class="quality-badge">Cold-Pressed</span>
+                    <span class="quality-badge">Best Value</span>
+                </div>
+                <div class="product-features">
+                    <ul>
+                        <li>Sourced from local farmers</li>
+                        <li>Zero additives or preservatives</li>
+                        <li>Perfect for daily cooking</li>
+                        <li>Supports local communities</li>
+                    </ul>
+                </div>
+                <div class="product-price">₹1,800</div>
+                <button class="btn btn-primary add-to-cart">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+
+            <!-- Product 5: 5L -->
+            <div class="product-card" data-category="large" data-price="4200">
+                <div class="product-image">
+                    <img src="https://wallpaper.forfun.com/fetch/c9/c9f036c1e535291d15e47148242bbfb0.jpeg"
+                        alt="Pure Heritage Virgin Coconut Oil 5L">
+                    <span class="product-badge">Bulk Buy</span>
+                </div>
+                <div class="product-origin"><i class="fas fa-map-marker-alt"></i> Konaseema, East Godavari</div>
+                <h3 class="product-title">Virgin Coconut Oil - 5 Liters</h3>
+                <p>Wholesale quality for homes and businesses. Authentic Konaseema heritage in bulk.</p>
+                <div class="quality-badges">
+                    <span class="quality-badge">100% Natural</span>
+                    <span class="quality-badge">Cold-Pressed</span>
+                    <span class="quality-badge">Wholesale</span>
+                </div>
+                <div class="product-features">
+                    <ul>
+                        <li>Direct from Konaseema farms</li>
+                        <li>Maximum freshness guaranteed</li>
+                        <li>Ideal for restaurants & cafes</li>
+                        <li>Best price per liter</li>
+                    </ul>
+                </div>
+                <div class="product-price">₹4,200</div>
+                <button class="btn btn-primary add-to-cart">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+
+            <!-- Product 6: Gift Set -->
+            <div class="product-card" data-category="small" data-price="1500">
+                <div class="product-image">
+                    <img src="https://wallpaper.forfun.com/fetch/c9/c9f036c1e535291d15e47148242bbfb0.jpeg"
+                        alt="Pure Heritage Coconut Oil Gift Set">
+                    <span class="product-badge">Premium Gift</span>
+                </div>
+                <div class="product-origin"><i class="fas fa-map-marker-alt"></i> Konaseema, East Godavari</div>
+                <h3 class="product-title">Heritage Gift Set</h3>
+                <p>Beautifully packaged collection featuring our finest cold-pressed oils from Konaseema.</p>
+                <div class="quality-badges">
+                    <span class="quality-badge">100% Natural</span>
+                    <span class="quality-badge">Premium Packaging</span>
+                    <span class="quality-badge">Gift Ready</span>
+                </div>
+                <div class="product-features">
+                    <ul>
+                        <li>2x 500ml premium bottles</li>
+                        <li>Traditional wooden gift box</li>
+                        <li>Certificate of authenticity</li>
+                        <li>Perfect for special occasions</li>
+                    </ul>
+                </div>
+                <div class="product-price">₹1,500</div>
+                <button class="btn btn-primary add-to-cart">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Konaseema Story Section -->
+    <section class="konaseema-story">
         <div class="container">
-            <h2>Product Specifications</h2>
-            <div class="specs-grid">
-                <div class="spec-item">
-                    <h4>Ingredients</h4>
-                    <p>100% Pure Virgin Coconut Oil</p>
+            <div class="story-content">
+                <div class="story-text">
+                    <h2>The Konaseema Difference</h2>
+                    <p>Nestled in the fertile delta of East Godavari, Konaseema is renowned as the coconut paradise of
+                        Andhra Pradesh. The unique soil composition, abundant water resources, and tropical climate
+                        create the perfect conditions for growing the finest coconuts in India.</p>
+                    <p>Our coconuts are harvested from traditional groves that have been nurtured for generations. Each
+                        coconut is hand-selected at peak ripeness, ensuring maximum nutritional value and authentic
+                        flavor.</p>
+                    <p>The cold-pressing process begins within 24 hours of harvest, preserving the natural goodness,
+                        aroma, and health benefits that make Konaseema coconut oil truly exceptional.</p>
+                    <a href="our-story.html" class="btn btn-primary">Discover Our Heritage</a>
                 </div>
-                <div class="spec-item">
-                    <h4>Extraction Method</h4>
-                    <p>Cold-Pressed (Heatless Technology)</p>
-                </div>
-                <div class="spec-item">
-                    <h4>Purity</h4>
-                    <p>100% Food-Grade</p>
-                </div>
-                <div class="spec-item">
-                    <h4>FFA Level</h4>
-                    <p>0.3% Maximum</p>
-                </div>
-                <div class="spec-item">
-                    <h4>Shelf Life</h4>
-                    <p>2 Years (Proper Storage)</p>
-                </div>
-                <div class="spec-item">
-                    <h4>Certifications</h4>
-                    <p>Organic Certified, GST Registered</p>
+                <div class="story-image">
+                    <img src="https://img.freepik.com/premium-photo/coconut-oil-with-coconut-fruits-cut-half-isolated-white-background_252965-658.jpg"
+                        alt="Konaseema Coconut Groves">
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Cold-Pressing Process -->
+    <section class="process-section">
+        <div class="container">
+            <h2>Our Traditional Cold-Pressing Process</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Hand Selection</h3>
+                    <p>Fresh coconuts are carefully hand-picked from our Konaseema groves at optimal maturity</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Fresh Extraction</h3>
+                    <p>Coconut meat is extracted within 24 hours to preserve maximum freshness and nutrients</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Cold-Pressing</h3>
+                    <p>Traditional wooden press method without heat or chemicals maintains natural properties</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Natural Filtering</h3>
+                    <p>Pure oil is naturally filtered through cotton cloth, preserving authentic aroma and taste</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Experience Pure Heritage Quality</h2>
+            <p>Join thousands of satisfied customers who trust our authentic Konaseema coconut oil</p>
+            <div class="cta-buttons">
+                <a href="wholesale.html" class="btn btn-primary">Bulk Orders</a>
+                <a href="contact.html" class="btn btn-outline">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h4>Konaseema Agro Products</h4>
-                    <p>Premium organic virgin coconut oil from the heart of East Godavari, Andhra Pradesh.</p>
+                    <h4>Pure Heritage</h4>
+                    <p>Authentic cold-pressed virgin coconut oil from the heart of Konaseema, East Godavari. Preserving
+                        tradition, delivering purity.</p>
                     <div class="social-links">
-                        <a href="#" aria-label="Facebook">📘</a>
-                        <a href="#" aria-label="Instagram">📷</a>
-                        <a href="#" aria-label="WhatsApp">💬</a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -315,28 +651,30 @@
                     <ul>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="products.html">Products</a></li>
-                        <li><a href="wholesale.html">Wholesale</a></li>
+                        <li><a href="our-story.html">Our Story</a></li>
+                        <li><a href="sustainability.html">Sustainability</a></li>
                         <li><a href="blog.html">Blog</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Support</h4>
+                    <h4>Customer Service</h4>
                     <ul>
                         <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="#">Shipping Policy</a></li>
-                        <li><a href="#">Return Policy</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="wholesale.html">Wholesale Inquiry</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns Policy</a></li>
+                        <li><a href="#">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Contact Info</h4>
-                    <p>📍 Mummidivaram, East Godavari<br>Andhra Pradesh, India</p>
-                    <p>📞 +91 XXXXX XXXXX</p>
-                    <p>✉️ info@konaseemacoconutoil.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Konaseema, East Godavari<br>Andhra Pradesh, India</p>
+                    <p><i class="fas fa-phone"></i> +91 [phone_number]</p>
+                    <p><i class="fas fa-envelope"></i> [email]</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Konaseema Agro Products. All rights reserved. | GST Registered</p>
+                <p>&copy; 2024 Pure Heritage. All rights reserved. | Crafted with tradition from Konaseema</p>
             </div>
         </div>
     </footer>
@@ -346,3 +684,4 @@
 </body>
 
 </html>
+""
